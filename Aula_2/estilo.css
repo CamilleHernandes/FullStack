@@ -1,0 +1,23 @@
+p{
+    color:blueviolet 
+}
+
+h1{
+    font-size: smaller
+}
+
+#P_1{
+    color: green;
+}
+
+.paragrafoPreto{
+    color: black
+}
+
+div p{
+    color: rgb(196, 18, 157);
+}
+
+#p2:hover{
+    color: darkcyan;
+}
