@@ -1,0 +1,23 @@
+#BodyIndex{
+    background-color: rgb(210, 238, 236);
+}
+
+#tituloProj{
+    color: rgb(5, 131, 250)
+}
+
+
+#tituloProj:hover{
+    color: rgb(45, 186, 196);
+}
+
+.divPaisagens p{
+    color: rgb(14, 84, 235);
+}
+
+.divTabela{
+    align-items: center;
+   
+    text-align: center ;
+}
+
