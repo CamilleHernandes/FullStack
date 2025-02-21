@@ -13,11 +13,23 @@
 
 .divPaisagens p{
     color: rgb(14, 84, 235);
+    text-align: center;
 }
+
+.divPaisagens{
+    margin-left: 250px;
+    margin-right: 250px;
+    justify-content: center;
+}
+
+.divPaisagens2{
+    margin-left: 400px;
+    margin-right: 250px;
+}
+
 
 .divTabela{
     align-items: center;
-   
     text-align: center ;
 }
 
