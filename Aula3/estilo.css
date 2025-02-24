@@ -1,0 +1,65 @@
+div{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(230, 174, 174);
+}
+
+.dotted{
+    border-style:dotted;
+    width: 200px;
+}
+
+.dashed{
+    border-style: dashed;
+    width: 300px;
+    background-color: rgb(247, 228, 247);
+}
+
+.dashed:hover{
+    background-color: rgb(233, 125, 200); /*muda a cor do fundo quando passa o mouse encima*/
+}
+
+.solid{
+    border-style: solid;
+    width: 400px;
+}
+
+p,a{
+    background-color: blueviolet;
+}
+
+p{
+    display: inline; /*pega somente o espaço em que a escrita esta ocupando*/
+}
+
+a{
+    display: block; /*pega toda a linha da tela*/
+}
+
+#Div1{
+    background-color: rgb(156, 203, 245);
+    display: inline;
+    position: relative; /*começa em relacao ao h2 que estava acima dele*/
+    left: 100px;
+    top: 200px;
+}
+
+#Div2{
+    display: inline;
+    background-color: rgb(181, 245, 245);
+    position: absolute; /*começa em relacao a borda da pagina*/
+    left: 200px;
+    top: 200px;
+    z-index: -1;
+
+}
+
+#contato{
+    display: inline;
+    background-color: rgb(194, 252, 194);
+    position: fixed; /*fica fixado, mesmo que o usuario role a tela*/
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
