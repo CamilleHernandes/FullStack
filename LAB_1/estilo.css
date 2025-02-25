@@ -11,14 +11,15 @@
     color: rgb(45, 186, 196);
 }
 
-.divPaisagens p{
+#Paisagens{
     color: rgb(14, 84, 235);
     text-align: center;
+    
 }
 
 .divPaisagens{
     margin-left: 250px;
-    margin-right: 250px;
+    
     justify-content: center;
 }
 
@@ -27,9 +28,49 @@
     margin-right: 250px;
 }
 
-
 .divTabela{
     align-items: center;
     text-align: center ;
 }
 
+
+/*Atv Copiando um Modelo*/
+.HeaderCopy{
+    background-color: bisque;
+    color: darkgreen;
+    height: 120px;
+    border: solid blue;
+}
+
+#tituloHeader{
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.ImgHeader{ 
+    position: relative;
+    top: -85px;
+}
+
+#introducao{
+    text-align: center;
+}
+
+#bodyCopy{
+    background-color:  lightgray;
+}
+
+.TextoPrincipal{
+    text-align: center;
+    color:indigo;
+}
+
+#textoLivros{
+    text-align: center;
+}
+
+.imagensLivros{
+    position: absolute;
+    left: 360px;
+}
