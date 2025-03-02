@@ -35,11 +35,13 @@
 
 
 /*Atv Copiando um Modelo*/
+
 .HeaderCopy{
     background-color: bisque;
     color: darkgreen;
     height: 120px;
     border: solid blue;
+    box-shadow: 0px 45px lightskyblue;
 }
 
 #tituloHeader{
@@ -59,6 +61,7 @@
 
 #bodyCopy{
     background-color:  lightgray;
+    height: fit-content;
 }
 
 .TextoPrincipal{
@@ -70,7 +73,28 @@
     text-align: center;
 }
 
-.imagensLivros{
+.LivroseVideos{
     position: absolute;
     left: 360px;
+    display: flex;
+    justify-content: space-between; /*deixa os itens distribuídos igualmente, sem espaço nas laterais, pode ser usado o space around tambem, ele adiciona um pequeno espaço nas laterais*/
+    gap: 20px;/* espaçamento entre os itens */
+    z-index: -1;
+}
+
+#textoJava{
+    text-align: center;
+    position: relative;
+}
+
+.NavHeader{
+    color: darkred;
+    font-size: small;
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    display: flex;
+    justify-content: space-between center;
+    align-items: center;
+    gap: 20px;
 }
