@@ -47,12 +47,25 @@
 #tituloHeader{
     justify-content: center;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 10px;
+    font-size: 40px;
 }
 
 .ImgHeader{ 
-    position: relative;
-    top: -85px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+}
+
+.ImgHeaderJava{ 
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    
 }
 
 #introducao{
@@ -74,17 +87,24 @@
 }
 
 .LivroseVideos{
-    position: absolute;
-    left: 360px;
+    position: relative;
     display: flex;
-    justify-content: space-between; /*deixa os itens distribuídos igualmente, sem espaço nas laterais, pode ser usado o space around tambem, ele adiciona um pequeno espaço nas laterais*/
-    gap: 20px;/* espaçamento entre os itens */
-    z-index: -1;
+    justify-content: space-evenly; /*deixa os itens distribuídos igualmente, sem espaço nas laterais, pode ser usado o space around tambem, ele adiciona um pequeno espaço nas laterais*/
+    /* "gap" é espaçamento entre os itens */
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.LivroseVideos img {
+    max-width: 100%; /* Garante que as imagens se ajustem ao espaço disponível */
+    height: auto; /* Mantém a proporção das imagens */
+    object-fit: cover; /* Garante que as imagens preencham o espaço sem distorcer */
 }
 
 #textoJava{
     text-align: center;
-    position: relative;
+    margin-top: 20px; 
+    margin-bottom: 30px;
 }
 
 .NavHeader{
@@ -92,9 +112,20 @@
     font-size: small;
     position: absolute;
     top: 130px;
-    left: 100px;
+    left: 470px;
     display: flex;
     justify-content: space-between center;
     align-items: center;
+    gap: 120px;
+}
+
+.videos{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-around center;
+    max-width: 100%;
+    height: auto;
     gap: 20px;
+    object-fit: cover;
 }
