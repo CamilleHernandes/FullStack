@@ -129,3 +129,64 @@
     gap: 20px;
     object-fit: cover;
 }
+
+#contato{
+    text-align: center;
+}
+
+#tabelaContato{
+    text-align: center;
+    border-style: dashed;
+    border-color: red;
+}
+
+#tdContato{
+    color: red;
+}
+
+.sitesConsulta{
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    background-color: yellow;
+    display: inline-block;
+}
+
+a {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footerCopy{
+    display: flex;
+    height: 170px;
+    background-color: bisque;
+}
+
+.ImgFooterHtml{ 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 40px;
+}
+
+.ImgHeaderCss{ 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-left: 580px;
+}
+
+#textoFooter{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    font-family: "Comic Sans MS";
+    font-size: 15pt
+    
+    
+}
