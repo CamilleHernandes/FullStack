@@ -121,17 +121,25 @@
 
 .videos{
     position: relative;
-    display: inline-block;
-    align-items: center;
-    justify-content: space-around center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.videos iframe{
     max-width: 100%;
-    height: auto;
-    gap: 20px;
     object-fit: cover;
 }
 
 #contato{
     text-align: center;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 #tabelaContato{
@@ -145,11 +153,13 @@
 }
 
 .sitesConsulta{
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    margin: 10px auto;
     width: 500px;
     background-color: yellow;
-    display: inline-block;
+    
 }
 
 a {
