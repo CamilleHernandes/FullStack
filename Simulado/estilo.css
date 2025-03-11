@@ -1,1 +1,39 @@
+.containerHeader{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+}
 
+#textoContainer{
+    padding-left: 10px;
+    width: 140px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.linksHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.linksBody{
+    display: flex;
+    justify-content: center;
+}
+
+.imgFriends{
+    display: flex;
+    justify-content: center;
+}
+
+.containerFriends{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#imgFriends3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
