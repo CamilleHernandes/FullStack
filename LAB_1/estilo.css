@@ -52,20 +52,19 @@
 }
 
 .ImgHeader{ 
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 20px;
-    left: 20px;
+    display: flex;
+    justify-content: space-between;/*o contrario do align-items*/
+    align-items: center; /*Controla o alinhamento dos itens(vertical se for 'row', horizontal se for 'column')*/
+    gap: 10px; /* Espaçamento entre as imagens */
 }
 
-.ImgHeaderJava{ 
-    position: absolute;
-    justify-content: center;
+.NavHeader{
+    display: flex;
+    color: darkred;
+    font-size: small;
+    justify-content: space-evenly;
     align-items: center;
-    top: 20px;
-    right: 20px;
-    
+    padding-top: 10px;
 }
 
 #introducao{
@@ -92,7 +91,7 @@
     justify-content: space-evenly; /*deixa os itens distribuídos igualmente, sem espaço nas laterais, pode ser usado o space around tambem, ele adiciona um pequeno espaço nas laterais*/
     /* "gap" é espaçamento entre os itens */
     z-index: 1;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Controla se os itens devem quebrar para uma nova linha quando não couberem no contêiner:*/
 }
 
 .LivroseVideos img {
@@ -107,17 +106,7 @@
     margin-bottom: 30px;
 }
 
-.NavHeader{
-    color: darkred;
-    font-size: small;
-    position: absolute;
-    top: 130px;
-    left: 470px;
-    display: flex;
-    justify-content: space-between center;
-    align-items: center;
-    gap: 120px;
-}
+
 
 .videos{
     position: relative;
@@ -153,13 +142,11 @@
 }
 
 .sitesConsulta{
-    display: inline-block;
+    display: flex;
     text-align: left;
-    padding: 10px;
-    margin: 10px auto;
+    margin: 5px auto;
     width: 500px;
     background-color: yellow;
-    
 }
 
 a {
@@ -171,32 +158,21 @@ a {
 
 .footerCopy{
     display: flex;
-    height: 170px;
     background-color: bisque;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+
 }
 
-.ImgFooterHtml{ 
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 40px;
-}
-
-.ImgHeaderCss{ 
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 40px;
-    padding-left: 580px;
+.footerCopy img{
+    object-fit: contain;
+    max-width: fit-content;
 }
 
 #textoFooter{
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-right: 30px;
     font-family: "Comic Sans MS";
     font-size: 15pt
-    
-    
 }
