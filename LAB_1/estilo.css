@@ -2,6 +2,14 @@
     background-color: rgb(210, 238, 236);
 }
 
+#bodyProj{
+    background-color: rgb(189, 233, 227);
+}
+
+#bodyAdv{
+    background-color: rgb(84, 184, 179);
+}
+
 #tituloProj{
     color: rgb(5, 131, 250)
 }
@@ -175,4 +183,10 @@ a {
     text-align: center;
     font-family: "Comic Sans MS";
     font-size: 15pt
+}
+
+/*Atv Adivinhação*/
+
+.centro{
+    text-align: center;
 }
