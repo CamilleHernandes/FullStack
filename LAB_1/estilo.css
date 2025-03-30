@@ -190,3 +190,14 @@ a {
 .centro{
     text-align: center;
 }
+
+#mens{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#historico{
+    font-size: 30px;
+    font-weight: bold;
+}
