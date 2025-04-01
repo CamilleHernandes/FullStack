@@ -6,9 +6,6 @@
     background-color: rgb(189, 233, 227);
 }
 
-#bodyAdv{
-    background-color: rgb(84, 184, 179);
-}
 
 #tituloProj{
     color: rgb(5, 131, 250)
@@ -187,8 +184,22 @@ a {
 
 /*Atv Adivinhação*/
 
+#bodyAdv{
+    background-color: rgb(84, 184, 179);
+}
+
 .centro{
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#botao{
+    color: rgb(0, 0, 0);
+    background-color: rgb(34, 218, 202);
 }
 
 #mens{
@@ -206,4 +217,27 @@ a {
     font-size: 30px;
     font-weight: bold;
     color: rgb(20, 35, 31);
+}
+
+/*canvas*/
+
+#bodycanvas{
+    background-color: rgb(153, 189, 221);
+}
+
+canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas1{ 
+    background-color: white;
+    margin: 10px;
+}
+
+#canvas2{
+    background-color: white;
+    margin: 10px;
 }
