@@ -223,13 +223,20 @@ a {
 
 #bodycanvas{
     background-color: rgb(153, 189, 221);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(7, 21, 98);
+    font-size: larger;
 }
 
-canvas{
+.canvas{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+
 }
 
 #canvas1{ 
