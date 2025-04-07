@@ -154,11 +154,11 @@ desenhar_circulo2(ctx2, "#2E8B57", 67.5, 145, 17); // copa
 desenhar_retangulo2(ctx2, "#8B4513", 253, 195, 15, 25);
 desenhar_circulo2(ctx2, "#2E8B57",260, 180, 17);
 
-// deixar o lago para depois
-desenhar_circulo2(ctx2,"rgb(51, 124, 161)",10, 180, 35)
-desenhar_retangulo2(ctx2,"rgb(51, 124, 161)",0,180,45,130)
-desenhar_retangulo2(ctx2,"rgb(51, 124, 161)",0,260,130,45)
-desenhar_circulo2(ctx2,"rgb(51, 124, 161)",140, 294, 35)
+//lago
+desenhar_circulo2(ctx2,"rgb(23, 186, 226)",10, 180, 35)
+desenhar_retangulo2(ctx2,"rgb(23, 186, 226)",0,180,45,130)
+desenhar_retangulo2(ctx2,"rgb(23, 186, 226)",0,260,130,45)
+desenhar_circulo2(ctx2,"rgb(23, 186, 226)",140, 294, 35)
 
 
 
