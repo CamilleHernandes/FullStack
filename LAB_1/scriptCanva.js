@@ -1,5 +1,4 @@
 let canvas1 = document.getElementById('canvas1');
-
 let ctx1 = canvas1.getContext('2d');
 
 function escrever_Texto(ctx1, texto, cor, x, y, fonte = '20px Arial') {
@@ -61,10 +60,10 @@ function desenhar_circulo(ctx1,color,border,xc,yc,r){
     ctx1.closePath();
 }
 
-desenhar_circulo(ctx1,"aquamarine","blue",150,110,15)
-desenhar_circulo(ctx1,"yellow","green",210,220,15)
-desenhar_circulo(ctx1,"yellow","green",70,220,15)
-desenhar_circulo(ctx1,"aquamarine","green",150,300,35)
+ desenhar_circulo(ctx1,"aquamarine","blue",150,110,15)
+ desenhar_circulo(ctx1,"yellow","green",210,220,15)
+ desenhar_circulo(ctx1,"yellow","green",70,220,15)
+ desenhar_circulo(ctx1,"aquamarine","green",150,300,40)
 
 
 // Arcos - nao to conseguido tambem
@@ -78,7 +77,7 @@ function desenharArco(ctx1, color, x, y, raio, z ,antiHorario = false){//, angul
 }
 
   // Desenha arcos verdes em diferentes posições
-  desenharArco(ctx1, 'green', 150, 150, 70, 1 ,false); // Meio círculo superior
+  desenharArco(ctx1, 'green', 150, 150, 70, 1 ,false); 
   desenharArco(ctx1,'green',150, 150, 90, 1.75 ,false)
   desenharArco(ctx1,'green',130, 300, 75, 1.57, false)
  
@@ -103,63 +102,63 @@ function desenharArco(ctx1, color, x, y, raio, z ,antiHorario = false){//, angul
 let canvas2 = document.getElementById('canvas2');
 let ctx2 = canvas2.getContext('2d');
 
-function desenhar_retangulo(ctx, cor, x, y, largura, altura) {
-    ctx.beginPath();
-    ctx.fillStyle = cor;
-    ctx.fillRect(x, y, largura, altura);
-    ctx.closePath();
+function desenhar_retangulo2(ctx2, cor, x, y, largura, altura) {
+    ctx2.beginPath();
+    ctx2.fillStyle = cor;
+    ctx2.fillRect(x, y, largura, altura);
+    ctx2.closePath();
 }
 
-function desenhar_circulo(ctx, cor, x, y, r) {
-    ctx.beginPath();
-    ctx.lineWidth = 1;
-    ctx.fillStyle = cor;
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.closePath();
+function desenhar_circulo2(ctx2, cor, x, y, r) {
+    ctx2.beginPath();
+    ctx2.lineWidth = 1;
+    ctx2.fillStyle = cor;
+    ctx2.arc(x, y, r, 0, Math.PI * 2);
+    ctx2.fill();
+    ctx2.closePath();
 }
 
-function desenhar_triangulo(ctx, cor, x1, y1, x2, y2, x3, y3) {
-    ctx.beginPath();
-    ctx.fillStyle = cor;
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x2, y2);
-    ctx.lineTo(x3, y3);
-    ctx.closePath();
-    ctx.fill();
+function desenhar_triangulo2(ctx2, cor, x1, y1, x2, y2, x3, y3) {
+    ctx2.beginPath();
+    ctx2.fillStyle = cor;
+    ctx2.moveTo(x1, y1);
+    ctx2.lineTo(x2, y2);
+    ctx2.lineTo(x3, y3);
+    ctx2.closePath();
+    ctx2.fill();
 }
 
 // fundo
-desenhar_retangulo(ctx2, "#90FCD3", 0, 0, 300, 300); // céu
+desenhar_retangulo2(ctx2, "#90FCD3", 0, 0, 300, 300); // céu
 
 // chão
-desenhar_retangulo(ctx2, "gray", 0, 180, 300, 120);
+desenhar_retangulo2(ctx2, "gray", 0, 180, 300, 120);
 
 // casa
-desenhar_retangulo(ctx2, "#874921", 125, 130, 50, 50); // parede
-desenhar_retangulo(ctx2, "rgb(98, 80, 62)", 145, 150, 10, 30); // porta
-desenhar_retangulo(ctx2, "#51C5FF", 130, 135, 15, 15); // janela esquerda
-desenhar_retangulo(ctx2, "#51C5FF", 155, 135, 15, 15); // janela direita
+desenhar_retangulo2(ctx2, "#874921", 125, 130, 50, 50); // parede
+desenhar_retangulo2(ctx2, "rgb(98, 80, 62)", 145, 150, 10, 30); // porta
+desenhar_retangulo2(ctx2, "#51C5FF", 130, 135, 15, 15); // janela esquerda
+desenhar_retangulo2(ctx2, "#51C5FF", 155, 135, 15, 15); // janela direita
 
 // telhado
-desenhar_triangulo(ctx2, "#F26C4F", 125, 130, 175, 130, 150, 105);
+desenhar_triangulo2(ctx2, "#F26C4F", 125, 130, 175, 130, 150, 105);
 
 // sol
-desenhar_circulo(ctx2, "yellow", 230, 70, 30);
+desenhar_circulo2(ctx2, "yellow", 230, 70, 30);
 
 // árvore esquerda
-desenhar_retangulo(ctx2, "#8B4513", 60, 150, 15, 30); // tronco
-desenhar_circulo(ctx2, "#2E8B57", 67.5, 145, 17); // copa
+desenhar_retangulo2(ctx2, "#8B4513", 60, 150, 15, 30); // tronco
+desenhar_circulo2(ctx2, "#2E8B57", 67.5, 145, 17); // copa
 
 // árvore direita
-desenhar_retangulo(ctx2, "#8B4513", 253, 195, 15, 25);
-desenhar_circulo(ctx2, "#2E8B57",260, 180, 17);
+desenhar_retangulo2(ctx2, "#8B4513", 253, 195, 15, 25);
+desenhar_circulo2(ctx2, "#2E8B57",260, 180, 17);
 
 // deixar o lago para depois
-desenhar_circulo(ctx2,"rgb(51, 124, 161)",10, 180, 35)
-desenhar_retangulo(ctx2,"rgb(51, 124, 161)",0,180,45,130)
-desenhar_retangulo(ctx2,"rgb(51, 124, 161)",0,260,130,45)
-desenhar_circulo(ctx2,"rgb(51, 124, 161)",140, 294, 35)
+desenhar_circulo2(ctx2,"rgb(51, 124, 161)",10, 180, 35)
+desenhar_retangulo2(ctx2,"rgb(51, 124, 161)",0,180,45,130)
+desenhar_retangulo2(ctx2,"rgb(51, 124, 161)",0,260,130,45)
+desenhar_circulo2(ctx2,"rgb(51, 124, 161)",140, 294, 35)
 
 
 
