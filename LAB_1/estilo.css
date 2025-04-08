@@ -248,3 +248,20 @@ a {
     background-color: white;
     margin: 10px;
 }
+
+/*Animação*/
+
+.bodyAnim{
+    background-color: rgb(247, 225, 232);
+}
+
+canvas{
+    
+    background-color: rgb(240, 243, 245);
+}
+
+.canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
