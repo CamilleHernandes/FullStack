@@ -256,8 +256,9 @@ a {
 }
 
 canvas{
-    
     background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(219, 45, 232);
+    
 }
 
 .canvas{
@@ -265,4 +266,5 @@ canvas{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    
 }

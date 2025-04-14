@@ -11,7 +11,7 @@ let bola ={
     desenha: function(){
         ctx.beginPath();
         ctx.drawImage(this.img, this.x - this.raio, this.y - this.raio, 2 * this.raio, 2 * this.raio); // Desenha a imagem da bola
-        //(this.x - this.raio, this.y - this.raio) - faz deixar a imagem centralizada onde o mouse esta
+        //(this.x - this.raio, this.y - this.raio) - faz deixar a imagem centralizada onde o mouse está
         ctx.closePath();
     }
 
