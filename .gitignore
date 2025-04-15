@@ -1,3 +1,6 @@
 #esse arquivo serve para que o github ignore certos arquivos que são muito grandes, por exemplo:
 Servidor/node_modules/*
 Servidor/package-lock.json
+
+Servidor2/node_modules/*
+Servidor2/package-lock.json
