@@ -1,0 +1,28 @@
+#bodyIndex{
+    background-color: rgb(116, 162, 203);
+}
+
+.menuIndex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    height: 100px;
+    margin: 0%;
+}
+
+@font-face { /*adicionando uma nova fonte baixada*/
+    font-family: 'Fonte';
+    src: url('fontes/AARDV.TTF') format('truetype');
+}
+
+.menuIndex a{
+    color: black;
+    text-decoration: solid;
+    font-weight: bold;
+    font-family: 'Fonte';
+}
+
+.menuIndex a:hover{
+    color: antiquewhite;
+}
