@@ -24,4 +24,8 @@ console.log("Servidor Rodando....".rainbow)
 // npm install é pra instalar a biblioteca(pacote)
 // node da um "play " o que foi feito no codigo
 
+//Exemplos de GET e POST
 
+app.get('/inicio', function(requisicao,resposta){
+    resposta.redirect('Aula9/index.html')
+})
