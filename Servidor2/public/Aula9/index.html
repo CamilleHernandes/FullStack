@@ -2,11 +2,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Aula 09</title>
+
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Meu Primeiro Servidor</h1>
 
     <h2>Exemplo de GET</h2>
-    <form action="get">Click Para Iniciar</form>
+    <form method="get" action="/inicio">
+        <input type="submit" value="Clique para iniciar">
+    </form>
+
+    <h2>Exemplo de POST</h2>
+    <form method="post" action="/inicio">
+        <input type="submit" value="Clique para iniciar">
+    </form>
+
+    <h2>Exemplo de Cadastro de um Usuario - GET</h2>
+    <form method="get" action="/cadastrar">
+        <p>Nome: <input type="text" name="nome"></p>
+        <p>Email: <input type="email" name="email"></p>
+        <p>Senha: <input type="password" name="senha"></p>
+        <p>Data de Nascimento: <input type="date" name="nasc"></p>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <h2>Exemplo de Cadastro de um Usuario - POST</h2>
+    <form method="post" action="/cadastrar">
+        <p>Nome: <input type="text" name="nome"></p>
+        <p>Email: <input type="email" name="email"></p>
+        <p>Senha: <input type="password" name="senha"></p>
+        <p>Data de Nascimento: <input type="date" name="nasc"></p>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <h2>Exemplo de For em ejs</h2>
+
+    <form method="get" action="/for_ejs">
+        <p>numero de divs: <input type="number" name="num"></p>
+
+        <input type="submit" value="Clique para gerar DIVs">
+    </form>
 </body>
 </html>
