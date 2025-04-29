@@ -4,11 +4,13 @@ body{
 
 #container{
     display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .item{
     background-color: aliceblue;
-    display: inline;
+    display: inline-block;
     margin: 10px;
-    padding: 10px;
+    padding: 10px;  
 }

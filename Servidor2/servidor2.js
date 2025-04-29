@@ -64,9 +64,8 @@ app.post('/cadastrar', function(requisicao,resposta){// a variavel requisicao pe
 })
 
 app.get('/for_ejs', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
-    let num = requisicao.query.num
- 
-    
+    let num = requisicao.query.num;
+
     resposta.render('exemplo_for.ejs', {tamanho: num});
  })
  
