@@ -268,3 +268,12 @@ canvas{
     margin-top: 30px;
     
 }
+
+/*Get, Post e Template*/
+.bodyCad{
+    background-color: rgb(243, 214, 250);
+}
+
+.bodyLogin{
+    background-color: rgb(121, 163, 201);
+}
