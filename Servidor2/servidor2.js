@@ -28,46 +28,68 @@ console.log("Servidor Rodando....".rainbow)
 // npm install é pra instalar a biblioteca(pacote)
 // node da um "play " o que foi feito no codigo
 
+//LAB 1 
+ app.post('/login', function(requisicao,resposta){
+    let email = requisicao.body.email; 
+    let senha = requisicao.body.senha; 
+
+    console.log(email,senha);
+
+    resposta.render('resp.ejs',
+     {email: email, senha: senha});
+
+ })
+
+ app.post('/cadastra', function(requisicao,resposta){
+    let nome = requisicao.body.nome; 
+    let email = requisicao.body.email; 
+    let senha = requisicao.body.senha; 
+    let nasc = requisicao.body.nasc; 
+
+    console.log(nome,email,senha,nasc);
+    
+ })
+
 //Exemplos de GET e POST
 
-app.get('/inicio', function(requisicao,resposta){
-    resposta.redirect('Aula1/index.html')
-})
+// app.get('/inicio', function(requisicao,resposta){
+//     resposta.redirect('Aula1/index.html')
+// })
 
-app.post('/inicio', function(requisicao,resposta){// a variavel resposta redireciona para algum lugar
-    resposta.redirect('Aula1/index.html') //faz o botao do index redirecionar para o index da aula1
-})
+// app.post('/inicio', function(requisicao,resposta){// a variavel resposta redireciona para algum lugar
+//     resposta.redirect('Aula1/index.html') //faz o botao do index redirecionar para o index da aula1
+// })
 
-app.get('/cadastrar', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
-   let nome = requisicao.query.nome; // variavel que pega as informacoes a partir do name que esta nos inputs
-   let email = requisicao.query.email; // query é o que aparece na barra de endereço, por isso só é usado com get
-   let senha = requisicao.query.senha;
-   let nasc = requisicao.query.nasc;
+// app.get('/cadastrar', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
+//    let nome = requisicao.query.nome; // variavel que pega as informacoes a partir do name que esta nos inputs
+//    let email = requisicao.query.email; // query é o que aparece na barra de endereço, por isso só é usado com get
+//    let senha = requisicao.query.senha;
+//    let nasc = requisicao.query.nasc;
 
-   console.log(nome,email,senha,nasc);
+//    console.log(nome,email,senha,nasc);
 
-   resposta.render('resposta.ejs',
-    {mensagem: "usuario cadastrado com sucesso", usuario: nome, login: email});
-})
+//    resposta.render('resposta.ejs',
+//     {mensagem: "usuario cadastrado com sucesso", usuario: nome, login: email});
+// })
 
 
-app.post('/cadastrar', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
-   let nome = requisicao.body.nome; // variavel que pega as informacoes a partir do name que esta nos inputs
-   let email = requisicao.body.email; // o body é usado somente com post
-   let senha = requisicao.body.senha;
-   let nasc = requisicao.body.nasc;
+// app.post('/cadastrar', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
+//    let nome = requisicao.body.nome; // variavel que pega as informacoes a partir do name que esta nos inputs
+//    let email = requisicao.body.email; // o body é usado somente com post
+//    let senha = requisicao.body.senha;
+//    let nasc = requisicao.body.nasc;
 
-   console.log(nome,email,senha,nasc);
+//    console.log(nome,email,senha,nasc);
 
-   resposta.render('resposta.ejs', 
-    {mensagem: "usuario cadastrado com sucesso", usuario: nome, login: email}); //renderiza as informações de acordo com as variaveis colocadas no resposta.ejs
-})
+//    resposta.render('resposta.ejs', 
+//     {mensagem: "usuario cadastrado com sucesso", usuario: nome, login: email}); //renderiza as informações de acordo com as variaveis colocadas no resposta.ejs
+// })
 
-app.get('/for_ejs', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
-    let num = requisicao.query.num;
+// app.get('/for_ejs', function(requisicao,resposta){// a variavel requisicao pega as informaçoes
+//     let num = requisicao.query.num;
 
-    resposta.render('exemplo_for.ejs', {tamanho: num});
- })
+//     resposta.render('exemplo_for.ejs', {tamanho: num});
+//  })
  
 
 
