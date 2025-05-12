@@ -42,26 +42,26 @@ app.get('/', function(req, res) {
 
 
 //LAB 1 
-//  app.post('/login', function(requisicao,resposta){
-//     let email = requisicao.body.email; 
-//     let senha = requisicao.body.senha; 
+ app.post('/login', function(requisicao,resposta){
+    let email = requisicao.body.email; 
+    let senha = requisicao.body.senha; 
 
-//     console.log(email,senha);
+    console.log(email,senha);
 
-//     resposta.render('resp.ejs',
-//      {email: email, senha: senha});
+    resposta.render('resp.ejs',
+     {email: email, senha: senha});
 
-//  })
+ })
 
-//  app.post('/cadastra', function(requisicao,resposta){
-//     let nome = requisicao.body.nome; 
-//     let email = requisicao.body.email; 
-//     let senha = requisicao.body.senha; 
-//     let nasc = requisicao.body.nasc; 
+ app.post('/cadastra', function(requisicao,resposta){
+    let nome = requisicao.body.nome; 
+    let email = requisicao.body.email; 
+    let senha = requisicao.body.senha; 
+    let nasc = requisicao.body.nasc; 
 
-//     console.log(nome,email,senha,nasc);
+    console.log(nome,email,senha,nasc);
     
-//  })
+ })
 
 // LAB_1 Create e Read
 
