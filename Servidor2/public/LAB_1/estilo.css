@@ -293,3 +293,53 @@ canvas{
     flex-direction: column;
     gap: 10px;
 }
+
+/*CREATE E READ*/
+
+.bodyPost{
+    background-color: rgb(144, 210, 227);
+}
+
+.bodyBlog{
+    background-color: rgb(135, 192, 249);
+}
+
+.divPost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#enviar{
+    text-align: center;
+    background-color: rgb(11, 25, 87);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.divPost a{
+    background-color: rgb(188, 220, 247);
+    border: solid 3px rgb(10, 177, 243);
+    color: rgb(0, 0, 0);
+}
+
+.divPost h1{
+    color: rgb(2, 15, 44);
+}
+
+.post{
+    background-color: rgb(165, 206, 232);
+    border-radius: 20px;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.post h3{
+    text-decoration: none;
+    font-weight: normal;
+}

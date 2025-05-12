@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/LAB_1/estilo.css">
+</head>
+<body class="bodyBlog">
+    <div class="divPost">
+
+        <a href="/cadastraPost">Criar novo post</a><br><br>
+    </div>
+
+<% posts.forEach(function(post) { %>
+    
+    <div class="post">
+      <h2><%= post.titulo %></h2>
+      <h3><%= post.resumo %></h3>
+      <h3><%= post.conteudo %></h3>
+    </div>
+    
+<% }) %>
+
+</body>
+</html>

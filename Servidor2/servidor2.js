@@ -11,6 +11,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 
 var dbo = client.db("exemplo_bd");
 var usuarios = dbo.collection("usuarios");
+var posts = dbo.collection("posts");
 
 //cria a variavel app, que vai ser por onde vamos acessar
 //os métodos / funções existentes no framework express
@@ -34,6 +35,12 @@ console.log("Servidor Rodando....".rainbow)
 // npm install é pra instalar a biblioteca(pacote)
 // node da um "play " o que foi feito no codigo
 
+// Redireciona '/' para a página de projetos
+app.get('/', function(req, res) {
+  res.redirect('LAB_1/projects.html');
+});
+
+
 //LAB 1 
 //  app.post('/login', function(requisicao,resposta){
 //     let email = requisicao.body.email; 
@@ -55,6 +62,45 @@ console.log("Servidor Rodando....".rainbow)
 //     console.log(nome,email,senha,nasc);
     
 //  })
+
+// LAB_1 Create e Read
+
+// Rota que exibe todos os posts
+app.get('/blog', function(req, res) { // Busca todos os posts no banco de dados
+  posts.find().toArray(function(err, lista) {
+    if (err) {
+      res.send("Erro ao buscar posts.");
+    } else {
+      res.render('blog.ejs', { posts: lista });
+    }
+  });
+});
+
+// Página do formulário
+const path = require('path'); // importando o módulo 'path' para juntar as pastas
+
+app.get('/cadastraPost', function(req, res) {
+  // Corrigindo o caminho com path.join()
+  res.sendFile(path.join(__dirname, 'public' ,'LAB_1', 'cadastrar_post.html')); // o path.join() junta as pastas, o dirname é a pasta atual(Servidor2)
+});
+
+// Cadastro de novo post
+app.post('/cadastraPost', function(req, res) { // Coleta os dados do formulário
+  let titulo = req.body.titulo;
+  let resumo = req.body.resumo;
+  let conteudo = req.body.conteudo;
+
+  let novoPost = { titulo, resumo, conteudo }; // Cria um novo objeto com os dados do post
+
+  posts.insertOne(novoPost, function(err) { // Insere o novo post no banco de dados
+    if (err) {
+      res.send("Erro ao cadastrar post.");
+    } else {
+      res.redirect('/blog');
+    }
+  });
+});
+
 
 // Exemplos de GET e POST
 
