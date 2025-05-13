@@ -51,5 +51,19 @@
         <input type="submit" value="Login">
     </form>
     
+    <h2>Exemplo de atualizacão de senha</h2>
+    <form action="/atualizar_usuario" method="post">
+        <p>Email: <input type="text" name="email"></p>
+        <p>Senha: <input type="password" name="senha"></p>
+        <p>Nova Senha: <input type="password" name="novasenha"></p>
+        <input type="submit" value="Update">
+    </form>
+
+    <h2>Exemplo de Remoção</h2>
+    <form action="/remover_usuario" method="post">
+        <p>Email: <input type="text" name="email"></p>
+        <p>Senha: <input type="password" name="senha"></p>
+        <input type="submit" value="Delete">
+    </form>
 </body>
 </html>

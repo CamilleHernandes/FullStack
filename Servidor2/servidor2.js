@@ -1,3 +1,5 @@
+// mongodb+srv://camillehernandes14:Camille14@camille.haiuuiv.mongodb.net/?retryWrites=true&w=majority&appName=Camille;
+
 require("colors");
 
 var http = require('http'); // inclui o módulo http
@@ -60,8 +62,13 @@ app.get('/', function(req, res) {
     let nasc = requisicao.body.nasc; 
 
     console.log(nome,email,senha,nasc);
+
+    resposta.render('resp2.ejs', 
+      {nome: nome, email: email, senha: senha, nasc: nasc}
+    )
     
  })
+
 
 // LAB_1 Create e Read
 
@@ -100,6 +107,7 @@ app.post('/cadastraPost', function(req, res) { // Coleta os dados do formulário
     }
   });
 });
+
 
 
 // Exemplos de GET e POST
@@ -167,5 +175,42 @@ app.post('/login', function(requisicao,resposta){
        }; 
    })
 })
+
+// Atualizacao de informações no banco de dados
+
+app.post('/atualizar_usuario', function(req,resp){
+  var data = { db_email: req.body.email, db_senha: req.body.senha }; //busca a informação no banco de dados
+  var newData = { $set: {db_senha: req.body.novasenha} }; // atualiza somente a nova senha que o usuario colocar, para atualizar mais de um campo, basta colocar uma virgula, o nome do que voce quer atualizar e :
+
+  usuarios.updateOne(data,newData, function(erro,result){
+    console.log(result);
+    if (result.modifiedCount == 0) { // se nao houve nenhuma alteracão...
+      resp.render('resposta_usuario.ejs', {resposta: "Usuário/senha não encontrado!"})
+    }else if (erro) { // se der erro
+      resp.render('resposta_usuario.ejs', {resposta: "Erro ao atualizar usuário!"})
+    }else { // se der tudo certo
+      resp.render('resposta_usuario.ejs', {resposta: "Usuário atualizado com sucesso!"})        
+    };
+  });
+
+})
+
+// deletar informações no banco de dados
+
+app.post('/remover_usuario', function(req,resp){
+  var data = {db_email: req.body.email, db_senha: req.body.senha};
+
+  usuarios.deleteOne(data, function(erro, result){
+    console.log(result)
+    if(result.modifiedCount == 0){
+      resp.render('resposta_usuario.ejs', {resposta: "Usuario/senha não encontrados"})
+    }else if(erro) {
+      resp.render('resposta_usuario.ejs', {resposta: "Erro ao atualizar usuário!"})
+    }else { // se der tudo certo
+      resp.render('resposta_usuario.ejs', {resposta: "Usuário atualizado com sucesso!"})        
+    };
+  })
+})
+
 
 // para instalar o mongodb: npm install mongodb@4.12
