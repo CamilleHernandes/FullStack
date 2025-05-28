@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Carros</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body id="bodylista">
+    <h1>Lista de Carros Disponíveis</h1>
+
+    <div class="carros">
+        
+        <% carros.forEach(carro => { %>
+        <div class="carro-card">
+            <h2><%= carro.db_marca %> - <%= carro.db_modelo %> </h2>
+            <p><strong>Ano:</strong> <%= carro.db_ano %></p>
+            <p><strong>Quantidade:</strong> <%= carro.db_qtd %></p>
+            <p class="<% if (carro.db_qtd > 0) { %>disponivel<% } else { %>esgotado<% } %>">
+                <% if (carro.db_qtd > 0) { %>
+                    Disponível
+                <% } else { %>
+                    Esgotado
+                <% } %>
+            </p>
+        </div>
+        <hr>
+        <% }); %>
+        
+    </div>
+</body>
+</html>

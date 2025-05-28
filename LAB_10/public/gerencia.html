@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body id="bodyGerencia">
+<div class="divGerencia">
+    <h2>Deseja ver a lista dos carros? <a href="/listaCarros">Clique aqui</a></h2>
+    <h1>Bem vindo ao gerenciamento de carros. O que deseja fazer?</h1>
+
+    <h2>Cadastrar Carro</h2>
+    <form action="/cadCarro" method="post">
+        <p>Marca: <input type="text" name="marca"></p>
+        <p>Modelo: <input type="text" name="modelo"></p>
+        <p>Ano: <input type="text" name="ano"></p>
+        <p>Qtd Disponível: <input type="text" name="qtd"></p>
+        <input type="submit" value="Cadastrar">
+    </form><br><br>
+
+    <h2>Remover carro</h2>
+    <form action="/excluirCarro" method="post">
+
+        <p>Marca: <input type="text" name="marca"></p>
+        <p>Modelo: <input type="text" name="modelo"></p>
+        <p>Ano: <input type="text" name="ano"></p><br>
+        <input type="submit" value="Remover">
+
+    </form><br><br>
+
+    <h2>Atualizar Carro</h2>
+    <form action="/atualizarCarro" method="post">
+        <h3>informe as informações do carro que quer atualizar</h3>
+        <p>Marca: <input type="text" name="marca"></p>
+        <p>Modelo: <input type="text" name="modelo"></p>
+        <p>Ano: <input type="text" name="ano"></p><br>
+        
+        <p>Nova Marca: <input type="text" name="novamarca"></p>
+        <p>Novo Modelo: <input type="text" name="novomodelo"></p>
+        <p>Novo Ano: <input type="text" name="novoano"></p><br>
+
+        <input type="submit" value="Atualizar">
+   </form><br><br>
+
+   <h2>Vender carro</h2>
+   <form action="/vender" method="post">
+        <p>Marca: <input type="text" name="marca"></p>
+        <p>Modelo: <input type="text" name="modelo"></p>
+        <p>Ano: <input type="text" name="ano"></p>
+        <p>Qtd: <input type="text" name="qtd"></p>
+        <input type="submit" value="Vender">
+   </form>
+</div>
+</body>
+</html>

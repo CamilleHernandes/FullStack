@@ -1,0 +1,54 @@
+#bodylista{
+    background-color: rgb(178, 237, 249);
+    text-align: center;
+}
+.carros{
+    background-color: rgb(183, 207, 231);
+    border-radius: 20px;
+    
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#bodyCarrosCad{
+    background-color: rgb(158, 187, 213);
+    text-align: center;
+}
+
+#bodyGerencia{
+    background-color: rgb(230, 204, 232);
+}
+
+.divGerencia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#bodyLogin{
+    background-color: rgb(152, 188, 188);
+}
+
+.divLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bodyCad{
+    background-color: rgb(179, 160, 196);
+}
+
+.divCad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
